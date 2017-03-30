@@ -1,0 +1,8 @@
+total 20
+-rw------- 1 andre andre    0 Mar 24 14:05 config-err-nkBDWr
+drwx------ 2 andre andre 4096 Mar 24 14:05 firefox_andre
+drwx------ 2 andre andre 4096 Mar 24 14:07 mozilla_andre0
+drwx------ 3 root  root  4096 Mar 24 14:04 systemd-private-6444e83e63554f108630499570313a13-colord.service-WfcEiP
+drwx------ 3 root  root  4096 Mar 24 14:05 systemd-private-6444e83e63554f108630499570313a13-rtkit-daemon.service-Qg4ZHB
+drwx------ 3 root  root  4096 Mar 24 14:04 systemd-private-6444e83e63554f108630499570313a13-systemd-timesyncd.service-rU2zvN
+-rw-rw-r-- 1 andre andre    0 Mar 24 14:05 unity_support_test.0

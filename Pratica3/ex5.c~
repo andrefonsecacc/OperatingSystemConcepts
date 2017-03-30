@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<unistd.h>
+
+int main(){
+
+  pid_t p;
+  
+  p=fork();
+
+  if(p==0){
+    printf("Filho PID %d PPID %d UID %d\n",getpid(),getppid(),getuid());
+    execlp("ls","ls","-l",NULL);
+
+  }
+  else{
+    printf("Pai PID %d PPID %d UID %d\n",getpid(),getppid(),getuid());
+  }
+
+
+ return 0;
+
+}

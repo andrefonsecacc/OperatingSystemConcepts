@@ -1,0 +1,1083 @@
+Script started on Qui 23 Fev 2017 17:11:45 WET
+]0;andre@andre-X555LD: ~/aulas/SO/Pratica2[01;32mandre@andre-X555LD[00m:[01;34m~/aulas/SO/Pratica2[00m$ date
+Qui Fev 23 17:11:53 WET 2017
+]0;andre@andre-X555LD: ~/aulas/SO/Pratica2[01;32mandre@andre-X555LD[00m:[01;34m~/aulas/SO/Pratica2[00m$ pstree
+systemd─┬─ModemManager─┬─{gdbus}
+        │              └─{gmain}
+        ├─NetworkManager─┬─dhclient
+        │                ├─dnsmasq
+        │                ├─{gdbus}
+        │                └─{gmain}
+        ├─accounts-daemon─┬─{gdbus}
+        │                 └─{gmain}
+        ├─acpid
+        ├─agetty
+        ├─avahi-daemon───avahi-daemon
+        ├─colord─┬─{gdbus}
+        │        └─{gmain}
+        ├─cron
+        ├─cups-browsed─┬─{gdbus}
+        │              └─{gmain}
+        ├─dbus-daemon
+        ├─fwupd─┬─3*[{GUsbEventThread}]
+        │       ├─{fwupd}
+        │       ├─{gdbus}
+        │       └─{gmain}
+        ├─gnome-keyring-d─┬─{gdbus}
+        │                 ├─{gmain}
+        │                 └─{timer}
+        ├─irqbalance
+        ├─lightdm─┬─Xorg───{Xorg}
+        │         ├─lightdm─┬─upstart─┬─at-spi-bus-laun─┬─dbus-daemon
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─at-spi2-registr─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─bamfdaemon─┬─{dconf worker}
+        │         │         │         │            ├─{gdbus}
+        │         │         │         │            └─{gmain}
+        │         │         │         ├─compiz─┬─{dconf worker}
+        │         │         │         │        ├─{gdbus}
+        │         │         │         │        ├─{gmain}
+        │         │         │         │        └─4*[{pool}]
+        │         │         │         ├─dbus-daemon
+        │         │         │         ├─dconf-service─┬─{gdbus}
+        │         │         │         │               └─{gmain}
+        │         │         │         ├─evolution-addre─┬─evolution-addre─┬─{dc+
+        │         │         │         │                 │                 ├─{ev+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{evolution-addre}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─evolution-calen─┬─evolution-calen─┬─{dc+
+        │         │         │         │                 │                 ├─2*[+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 ├─{gm+
+        │         │         │         │                 │                 └─{po+
+        │         │         │         │                 ├─evolution-calen─┬─{dc+
+        │         │         │         │                 │                 ├─{ev+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{evolution-calen}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─evolution-sourc─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─firefox─┬─Web Content─┬─{Chrome_ChildTh+
+        │         │         │         │         │             ├─2*[{DOM Worker}+
+        │         │         │         │         │             ├─{GMPThread}
+        │         │         │         │         │             ├─{HTML5 Parser}
+        │         │         │         │         │             ├─{Hang Monitor}
+        │         │         │         │         │             ├─{ImageBridgeChi+
+        │         │         │         │         │             ├─{ImageIO}
+        │         │         │         │         │             ├─{ImgDecoder #1}
+        │         │         │         │         │             ├─{ImgDecoder #2}
+        │         │         │         │         │             ├─{ImgDecoder #3}
+        │         │         │         │         │             ├─8*[{JS Helper}]
+        │         │         │         │         │             ├─{JS Watchdog}
+        │         │         │         │         │             ├─{ProcessHangMon+
+        │         │         │         │         │             ├─{Socket Thread}
+        │         │         │         │         │             ├─{Timer}
+        │         │         │         │         │             ├─{Web Content}
+        │         │         │         │         │             ├─{dconf worker}
+        │         │         │         │         │             ├─{gdbus}
+        │         │         │         │         │             ├─{gmain}
+        │         │         │         │         │             └─{threaded-ml}
+        │         │         │         │         ├─{Cache I/O}
+        │         │         │         │         ├─{Cache2 I/O}
+        │         │         │         │         ├─{Compositor}
+        │         │         │         │         ├─{DNS Res~ver #39}
+        │         │         │         │         ├─{DNS Res~ver #41}
+        │         │         │         │         ├─3*[{DOM Worker}]
+        │         │         │         │         ├─2*[{DataStorage}]
+        │         │         │         │         ├─{GMPThread}
+        │         │         │         │         ├─{Gecko_IOThread}
+        │         │         │         │         ├─{HTML5 Parser}
+        │         │         │         │         ├─{Hang Monitor}
+        │         │         │         │         ├─{IPDL Background}
+        │         │         │         │         ├─{ImageBridgeChil}
+        │         │         │         │         ├─{ImageIO}
+        │         │         │         │         ├─{ImgDecoder #1}
+        │         │         │         │         ├─{ImgDecoder #2}
+        │         │         │         │         ├─{ImgDecoder #3}
+        │         │         │         │         ├─8*[{JS Helper}]
+        │         │         │         │         ├─{JS Watchdog}
+        │         │         │         │         ├─{Link Monitor}
+        │         │         │         │         ├─{ProcessHangMoni}
+        │         │         │         │         ├─{Proxy R~olution}
+        │         │         │         │         ├─{Socket Thread}
+        │         │         │         │         ├─{SoftwareVsyncTh}
+        │         │         │         │         ├─{StreamTrans #39}
+        │         │         │         │         ├─{Timer}
+        │         │         │         │         ├─{URL Classifier}
+        │         │         │         │         ├─{dconf worker}
+        │         │         │         │         ├─{firefox}
+        │         │         │         │         ├─{gdbus}
+        │         │         │         │         ├─{gmain}
+        │         │         │         │         ├─{localStorage DB}
+        │         │         │         │         ├─{mozStorage #1}
+        │         │         │         │         ├─{mozStorage #2}
+        │         │         │         │         ├─{mozStorage #3}
+        │         │         │         │         ├─{mozStorage #4}
+        │         │         │         │         ├─{mozStorage #5}
+        │         │         │         │         ├─{mozStorage #6}
+        │         │         │         │         ├─{mozStorage #7}
+        │         │         │         │         └─{threaded-ml}
+        │         │         │         ├─gconfd-2
+        │         │         │         ├─gnome-session-b─┬─deja-dup-monito─┬─{dc+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─gnome-software─┬─{dco+
+        │         │         │         │                 │                ├─{gdb+
+        │         │         │         │                 │                └─{gma+
+        │         │         │         │                 ├─nautilus─┬─{dconf wor+
+        │         │         │         │                 │          ├─{gdbus}
+        │         │         │         │                 │          └─{gmain}
+        │         │         │         │                 ├─nm-applet─┬─{dconf wo+
+        │         │         │         │                 │           ├─{gdbus}
+        │         │         │         │                 │           └─{gmain}
+        │         │         │         │                 ├─polkit-gnome-au─┬─{dc+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─unity-fallback-─┬─{dc+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─update-notifier─┬─{dc+
+        │         │         │         │                 │                 ├─{gd+
+        │         │         │         │                 │                 └─{gm+
+        │         │         │         │                 ├─zeitgeist-datah─┬─{gd+
+        │         │         │         │                 │                 ├─{gm+
+        │         │         │         │                 │                 └─4*[+
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gnome-terminal-─┬─bash─┬─emacs─┬─{dconf+
+        │         │         │         │                 │      │       ├─{gdbus+
+        │         │         │         │                 │      │       └─{gmain+
+        │         │         │         │                 │      └─script───bash─+++
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gpg-agent
+        │         │         │         ├─gvfs-afc-volume─┬─{gdbus}
+        │         │         │         │                 ├─{gmain}
+        │         │         │         │                 └─{gvfs-afc-volume}
+        │         │         │         ├─gvfs-goa-volume─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gvfs-gphoto2-vo─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gvfs-mtp-volume─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gvfs-udisks2-vo─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─gvfsd─┬─{gdbus}
+        │         │         │         │       └─{gmain}
+        │         │         │         ├─gvfsd-dnssd─┬─{gdbus}
+        │         │         │         │             └─{gmain}
+        │         │         │         ├─gvfsd-fuse─┬─{gdbus}
+        │         │         │         │            ├─{gmain}
+        │         │         │         │            ├─{gvfs-fuse-sub}
+        │         │         │         │            └─2*[{gvfsd-fuse}]
+        │         │         │         ├─gvfsd-metadata─┬─{gdbus}
+        │         │         │         │                └─{gmain}
+        │         │         │         ├─gvfsd-network─┬─{dconf worker}
+        │         │         │         │               ├─{gdbus}
+        │         │         │         │               └─{gmain}
+        │         │         │         ├─gvfsd-trash─┬─{gdbus}
+        │         │         │         │             └─{gmain}
+        │         │         │         ├─hud-service─┬─{dconf worker}
+        │         │         │         │             ├─{gdbus}
+        │         │         │         │             └─{gmain}
+        │         │         │         ├─ibus-daemon─┬─ibus-dconf─┬─{dconf worke+
+        │         │         │         │             │            ├─{gdbus}
+        │         │         │         │             │            └─{gmain}
+        │         │         │         │             ├─ibus-engine-sim─┬─{gdbus}
+        │         │         │         │             │                 └─{gmain}
+        │         │         │         │             ├─ibus-ui-gtk3─┬─{dconf wor+
+        │         │         │         │             │              ├─{gdbus}
+        │         │         │         │             │              └─{gmain}
+        │         │         │         │             ├─{gdbus}
+        │         │         │         │             └─{gmain}
+        │         │         │         ├─ibus-x11─┬─{dconf worker}
+        │         │         │         │          ├─{gdbus}
+        │         │         │         │          └─{gmain}
+        │         │         │         ├─indicator-appli─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-bluet─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-datet─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 ├─{gmain}
+        │         │         │         │                 ├─{indicator-datet}
+        │         │         │         │                 └─{pool}
+        │         │         │         ├─indicator-keybo─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-messa─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-power─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-print─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-sessi─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─indicator-sound─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─notify-osd─┬─{dconf worker}
+        │         │         │         │            ├─{gdbus}
+        │         │         │         │            └─{gmain}
+        │         │         │         ├─pulseaudio─┬─{alsa-sink-ALC32}
+        │         │         │         │            ├─{alsa-sink-HDMI }
+        │         │         │         │            └─{alsa-source-ALC}
+        │         │         │         ├─rstudio─┬─rsession───5*[{rsession}]
+        │         │         │         │         ├─{QProcessManager}
+        │         │         │         │         ├─{QXcbEventReader}
+        │         │         │         │         ├─{Qt bearer threa}
+        │         │         │         │         ├─{dconf worker}
+        │         │         │         │         ├─{gdbus}
+        │         │         │         │         ├─{gmain}
+        │         │         │         │         └─6*[{rstudio}]
+        │         │         │         ├─sh───zeitgeist-daemo─┬─{gdbus}
+        │         │         │         │                      └─{gmain}
+        │         │         │         ├─unity-files-dae─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 ├─{gmain}
+        │         │         │         │                 └─4*[{pool}]
+        │         │         │         ├─unity-music-dae─┬─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─unity-panel-ser─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─unity-scope-hom─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─unity-scope-loa─┬─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 └─{gmain}
+        │         │         │         ├─unity-settings-─┬─syndaemon
+        │         │         │         │                 ├─{dconf worker}
+        │         │         │         │                 ├─{gdbus}
+        │         │         │         │                 ├─{gmain}
+        │         │         │         │                 └─{threaded-ml}
+        │         │         │         ├─2*[upstart-dbus-br]
+        │         │         │         ├─upstart-file-br
+        │         │         │         ├─upstart-udev-br
+        │         │         │         ├─window-stack-br
+        │         │         │         └─zeitgeist-fts─┬─{gdbus}
+        │         │         │                         └─{gmain}
+        │         │         ├─{gdbus}
+        │         │         └─{gmain}
+        │         ├─{gdbus}
+        │         └─{gmain}
+        ├─2*[mount.ntfs]
+        ├─polkitd─┬─{gdbus}
+        │         └─{gmain}
+        ├─rsyslogd─┬─{in:imklog}
+        │          ├─{in:imuxsock}
+        │          └─{rs:main Q:Reg}
+        ├─rtkit-daemon───2*[{rtkit-daemon}]
+        ├─snapd───8*[{snapd}]
+        ├─systemd───(sd-pam)
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-timesyn───{sd-resolve}
+        ├─systemd-udevd
+        ├─thermald───{thermald}
+        ├─udisksd─┬─{cleanup}
+        │         ├─{gdbus}
+        │         ├─{gmain}
+        │         └─{probing-thread}
+        ├─upowerd─┬─{gdbus}
+        │         └─{gmain}
+        ├─whoopsie─┬─{gdbus}
+        │          └─{gmain}
+        └─wpa_supplicant
+]0;andre@andre-X555LD: ~/aulas/SO/Pratica2[01;32mandre@andre-X555LD[00m:[01;34m~/aulas/SO/Pratica2[00m$ [K]0;andre@andre-X555LD: ~/aulas/SO/Pratica2[01;32mandre@andre-X555LD[00m:[01;34m~/aulas/SO/Pratica2[00m$ top
+[?1h=[?25l[H[2J(B[mtop - 17:14:57 up  2:35,  1 user,  load average: 0,31, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 221 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5,8 (B[m[39;49mus,(B[m[39;49m[1m  1,0 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 92,3 (B[m[39;49mid,(B[m[39;49m[1m  0,7 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3102852 (B[m[39;49mfree,(B[m[39;49m[1m  3340120 (B[m[39;49mused,(B[m[39;49m[1m  1612960 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4130332 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                    (B[m[39;49m[K
+(B[m 2228 andre     20   0 1575804 684204 118376 S  18,8  8,5   9:58.60 Web Content                                                                (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.03 rcu_sched                                                                  (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K
+(B[m   35 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 bioset                                                                     (B[m[39;49m[K
+(B[m   36 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kblockd                                                                    (B[m[39;49m[K
+(B[m   37 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 ata_sff                                                                    (B[m[39;49m[K
+(B[m   38 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 md                                                                         (B[m[39;49m[K
+(B[m   39 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 devfreq_wq                                                                 (B[m[39;49m[K
+(B[m   44 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kswapd0                                                                    (B[m[39;49m[K[H(B[mtop - 17:15:00 up  2:35,  1 user,  load average: 0,28, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 221 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  2,8 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,3 (B[m[39;49mni,(B[m[39;49m[1m 96,6 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,1 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3100856 (B[m[39;49mfree,(B[m[39;49m[1m  3342208 (B[m[39;49mused,(B[m[39;49m[1m  1612868 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4128460 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1575932 686060 118376 S   7,6  8,5   9:58.83 Web Content                                                                (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 352248 122752 S   3,7  4,4   6:11.95 firefox                                                                    (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201264  86044 S   2,0  2,5   2:33.27 rstudio                                                                    (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494236 120200  64280 S   0,3  1,5   1:13.11 compiz                                                                     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.89 rsession                                                                   (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.03 rcu_sched                                                                  (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K
+(B[m   35 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 bioset                                                                     (B[m[39;49m[K
+(B[m   36 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kblockd                                                                    (B[m[39;49m[K[H(B[mtop - 17:15:03 up  2:35,  1 user,  load average: 0,28, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,2 (B[m[39;49mus,(B[m[39;49m[1m  0,2 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 97,2 (B[m[39;49mid,(B[m[39;49m[1m  0,4 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3100948 (B[m[39;49mfree,(B[m[39;49m[1m  3342028 (B[m[39;49mused,(B[m[39;49m[1m  1612956 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4128568 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1575932 686612 118376 S   4,7  8,5   9:58.97 Web Content                                                                (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 352224 122752 S   2,7  4,4   6:12.03 firefox                                                                    (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   0,7  2,5   2:33.29 rstudio                                                                    (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.04 rcu_sched                                                                  (B[m[39;49m[K
+(B[m  930 root      20   0  418864  86884  70828 S   0,3  1,1   1:41.70 Xorg                                                                       (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.90 rsession                                                                   (B[m[39;49m[K
+(B[m 4059 root      20   0       0      0      0 S   0,3  0,0   0:00.09 kworker/2:0                                                                (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.01 top                                                                        (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K[H(B[mtop - 17:15:06 up  2:35,  1 user,  load average: 0,26, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 220 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  1,7 (B[m[39;49mus,(B[m[39;49m[1m  0,1 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 97,6 (B[m[39;49mid,(B[m[39;49m[1m  0,6 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3094212 (B[m[39;49mfree,(B[m[39;49m[1m  3348736 (B[m[39;49mused,(B[m[39;49m[1m  1612984 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4121840 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m 2228 andre     20   0 1575996 692404 118376 R   4,0  8,6   9:59.09 Web Content                                                                (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 352200 122752 S   2,3  4,4   6:12.10 firefox                                                                    (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494236 120200  64280 S   0,3  1,5   1:13.12 compiz                                                                     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   0,3  2,5   2:33.30 rstudio                                                                    (B[m[39;49m[K
+(B[m 3073 andre     20   0  654060  38520  28376 S   0,3  0,5   0:06.61 gnome-terminal-                                                            (B[m[39;49m[K
+(B[m 3271 root      20   0       0      0      0 S   0,3  0,0   0:01.77 kworker/u8:73                                                              (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.02 top                                                                        (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.04 rcu_sched                                                                  (B[m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H(B[mtop - 17:15:09 up  2:36,  1 user,  load average: 0,24, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  1,6 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 98,0 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3094244 (B[m[39;49mfree,(B[m[39;49m[1m  3348700 (B[m[39;49mused,(B[m[39;49m[1m  1612988 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4121880 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1575996 692896 118376 S   5,0  8,6   9:59.24 Web Content                                                                (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 352208 122752 S   2,3  4,4   6:12.17 firefox                                                                    (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   0,7  2,5   2:33.32 rstudio                                                                    (B[m[39;49m[K
+(B[m  733 message+  20   0   44296   5236   3552 S   0,3  0,1   0:02.37 dbus-daemon                                                                (B[m[39;49m[K
+(B[m  930 root      20   0  418864  86884  70828 S   0,3  1,1   1:41.71 Xorg                                                                       (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.79 ibus-daemon                                                                (B[m[39;49m[K
+(B[m 1509 andre     20   0  894476  46220  31028 S   0,3  0,6   0:05.07 nm-applet                                                                  (B[m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[6;1H[7m Unknown command - try 'h' for help [?25l(B[m[39;49m[K[?25l[H(B[mtop - 17:15:11 up  2:36,  1 user,  load average: 0,24, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 221 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  1,8 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 97,2 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,1 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3093892 (B[m[39;49mfree,(B[m[39;49m[1m  3349032 (B[m[39;49mused,(B[m[39;49m[1m  1613008 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4121532 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1575996 693792 118376 S   6,0  8,6   9:59.37 Web Content                                                                (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 351996 122752 S   2,3  4,4   6:12.22 firefox                                                                    (B[m[39;49m[K
+(B[m  537 root      20   0       0      0      0 S   0,5  0,0   0:00.93 rtsx_usb_ms_1                                                              (B[m[39;49m[K
+(B[m  797 root      20   0    4400   1220   1128 S   0,5  0,0   0:00.70 acpid                                                                      (B[m[39;49m[K
+(B[m  930 root      20   0  418864  86884  70828 S   0,5  1,1   1:41.72 Xorg                                                                       (B[m[39;49m[K
+(B[m 3073 andre     20   0  654060  38520  28376 S   0,5  0,5   0:06.62 gnome-terminal-                                                            (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.04 rcu_sched                                                                  (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K
+(B[m   35 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 bioset                                                                     (B[m[39;49m[K[?25l[H
+
+%Cpu(s):(B[m[39;49m[1m 50,0 (B[m[39;49mus,(B[m[39;49m[1m  0,0 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 50,0 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3093672 (B[m[39;49mfree,(B[m[39;49m[1m  3349252 (B[m[39;49mused,(B[m[39;49m[1m  1613008 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4121312 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R 100,0  0,0   0:00.03 top                                                                        (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.04 rcu_sched                                                                  (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K
+(B[m   35 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 bioset                                                                     (B[m[39;49m[K
+(B[m   36 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kblockd                                                                    (B[m[39;49m[K
+(B[m   37 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 ata_sff                                                                    (B[m[39;49m[K
+(B[m   38 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 md                                                                         (B[m[39;49m[K
+(B[m   39 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 devfreq_wq                                                                 (B[m[39;49m[K
+(B[m   44 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kswapd0                                                                    (B[m[39;49m[K[?25l[H(B[mtop - 17:15:12 up  2:36,  1 user,  load average: 0,24, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  1,3 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 98,1 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3093788 (B[m[39;49mfree,(B[m[39;49m[1m  3349108 (B[m[39;49mused,(B[m[39;49m[1m  1613036 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4121428 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 1747 andre     20   0 1362000 351996 122752 S   2,5  4,4   6:12.24 firefox                                                                    (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   1,2  2,5   2:33.33 rstudio                                                                    (B[m[39;49m[K
+(B[m 3073 andre     20   0  654060  38520  28376 S   1,2  0,5   0:06.63 gnome-terminal-                                                            (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   1,2  0,0   0:00.04 top                                                                        (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd                                                                    (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                   (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0                                                                (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:0H                                                               (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.04 rcu_sched                                                                  (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh                                                                     (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                                (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0                                                                 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1                                                                 (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                                (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1                                                                (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:0H                                                               (B[m[39;49m[K
+(B[m   16 root      rt   0       0      0      0 S   0,0  0,0   0:00.03 watchdog/2                                                                 (B[m[39;49m[K
+(B[m   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                                (B[m[39;49m[K
+(B[m   18 root      20   0       0      0      0 S   0,0  0,0   0:00.08 ksoftirqd/2                                                                (B[m[39;49m[K
+(B[m   20 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/2:0H                                                               (B[m[39;49m[K
+(B[m   21 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/3                                                                 (B[m[39;49m[K
+(B[m   22 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/3                                                                (B[m[39;49m[K
+(B[m   23 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                                (B[m[39;49m[K
+(B[m   25 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/3:0H                                                               (B[m[39;49m[K
+(B[m   26 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kdevtmpfs                                                                  (B[m[39;49m[K
+(B[m   27 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 netns                                                                      (B[m[39;49m[K
+(B[m   28 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 perf                                                                       (B[m[39;49m[K
+(B[m   29 root      20   0       0      0      0 S   0,0  0,0   0:00.00 khungtaskd                                                                 (B[m[39;49m[K
+(B[m   30 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 writeback                                                                  (B[m[39;49m[K
+(B[m   31 root      25   5       0      0      0 S   0,0  0,0   0:00.00 ksmd                                                                       (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,0  0,0   0:01.84 khugepaged                                                                 (B[m[39;49m[K
+(B[m   33 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 crypto                                                                     (B[m[39;49m[K
+(B[m   34 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kintegrityd                                                                (B[m[39;49m[K
+(B[m   35 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 bioset                                                                     (B[m[39;49m[K
+(B[m   36 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kblockd                                                                    (B[m[39;49m[K
+(B[m   37 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 ata_sff                                                                    (B[m[39;49m[K[H(B[mtop - 17:15:15 up  2:36,  1 user,  load average: 0,22, 0,16, 0,16(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   3 (B[m[39;49mrunning,(B[m[39;49m[1m 219 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  2,4 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 96,5 (B[m[39;49mid,(B[m[39;49m[1m  0,5 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3092252 (B[m[39;49mfree,(B[m[39;49m[1m  3349808 (B[m[39;49mused,(B[m[39;49m[1m  1613872 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4119912 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND     (B[m[39;49m[K
+(B[m 2228 andre     20   0 1576060 694724 118376 S   4,9  8,6   9:59.51 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 352000 122752 S   2,8  4,4   6:12.32 firefox     (B[m[39;49m[K
+(B[m[1m  930 root      20   0  415092  86840  70784 R   1,1  1,1   1:41.75 Xorg        (B[m[39;49m[K
+(B[m[1m 1617 andre     20   0 1494268 120236  64316 R   1,1  1,5   1:13.15 compiz      (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   0,7  2,5   2:33.35 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,4 21,8   0:35.91 rsession    (B[m[39;49m[K
+(B[m 3073 andre     20   0  654316  38780  28376 S   0,4  0,5   0:06.64 gnome-term+ (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.04 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1  (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1 (B[m[39;49m[K[H(B[mtop - 17:15:18 up  2:36,  1 user,  load average: 0,22, 0,16, 0,16(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 222 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 221 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  2,5 (B[m[39;49mus,(B[m[39;49m[1m  0,8 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 96,4 (B[m[39;49mid,(B[m[39;49m[1m  0,3 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3084244 (B[m[39;49mfree,(B[m[39;49m[1m  3354972 (B[m[39;49mused,(B[m[39;49m[1m  1616716 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4111916 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576060 699392 118376 S   4,7  8,7   9:59.65 Web Content (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494900 120496  64576 S   3,3  1,5   1:13.25 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415348  86840  70784 S   2,3  1,1   1:41.82 Xorg        (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362000 351968 122752 S   2,0  4,4   6:12.38 firefox     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   0,7  2,5   2:33.37 rstudio     (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.05 rcu_sched   (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.92 rsession    (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,3  0,5   0:06.65 gnome-term+ (B[m[39;49m[K
+(B[m 4185 root      20   0       0      0      0 S   0,3  0,0   0:00.03 kworker/u8+ (B[m[39;49m[K
+(B[m 4192 root      20   0       0      0      0 S   0,3  0,0   0:00.04 kworker/0:2 (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K[H(B[mtop - 17:15:21 up  2:36,  1 user,  load average: 0,20, 0,15, 0,16(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  6,8 (B[m[39;49mus,(B[m[39;49m[1m  1,0 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 91,1 (B[m[39;49mid,(B[m[39;49m[1m  1,1 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3090976 (B[m[39;49mfree,(B[m[39;49m[1m  3357408 (B[m[39;49mused,(B[m[39;49m[1m  1607548 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4118728 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 1747 andre     20   0 1362064 352924 122752 S  10,6  4,4   6:12.70 firefox     (B[m[39;49m[K
+(B[m 2228 andre     20   0 1576060 701480 118376 S   5,3  8,7   9:59.81 Web Content (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494860 120628  64628 S   5,0  1,5   1:13.40 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415320  86832  70776 S   3,3  1,1   1:41.92 Xorg        (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201200  86044 S   3,3  2,5   2:33.47 rstudio     (B[m[39;49m[K
+(B[m 1395 andre     20   0  691924  45676  34860 S   1,3  0,6   0:00.91 hud-service (B[m[39;49m[K
+(B[m 1277 andre     20   0   43964   4328   2780 S   0,7  0,1   0:01.55 dbus-daemon (B[m[39;49m[K
+(B[m 1385 andre     20   0  516428  29140  21572 S   0,7  0,4   0:02.67 bamfdaemon  (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.80 ibus-daemon (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,3  0,4   0:05.27 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1408 andre     20   0  633656  37228  25524 S   0,3  0,5   0:02.93 unity-pane+ (B[m[39;49m[K
+(B[m 3271 root      20   0       0      0      0 S   0,3  0,0   0:01.78 kworker/u8+ (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.05 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K[H(B[mtop - 17:15:24 up  2:36,  1 user,  load average: 0,20, 0,15, 0,16(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,7 (B[m[39;49mus,(B[m[39;49m[1m  0,7 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 96,2 (B[m[39;49mid,(B[m[39;49m[1m  0,3 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3088576 (B[m[39;49mfree,(B[m[39;49m[1m  3357368 (B[m[39;49mused,(B[m[39;49m[1m  1609988 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4116348 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576060 702472 118376 S   5,0  8,7   9:59.96 Web Content (B[m[39;49m[K
+(B[m 1617 andre     20   0 1497692 122152  66152 S   4,0  1,5   1:13.52 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415320  86832  70776 S   2,0  1,1   1:41.98 Xorg        (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352456 122752 S   2,0  4,4   6:12.76 firefox     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617960 201308  86044 S   2,0  2,5   2:33.53 rstudio     (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.05 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1  (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1 (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1 (B[m[39;49m[K
+(B[m   15 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/1:+ (B[m[39;49m[K[H(B[mtop - 17:15:27 up  2:36,  1 user,  load average: 0,27, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  5,2 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 93,3 (B[m[39;49mid,(B[m[39;49m[1m  0,7 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,1 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3085624 (B[m[39;49mfree,(B[m[39;49m[1m  3363016 (B[m[39;49mused,(B[m[39;49m[1m  1607292 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4113472 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 1747 andre     20   0 1362064 352952 122752 S   8,6  4,4   6:13.02 firefox     (B[m[39;49m[K
+(B[m 2228 andre     20   0 1576060 705696 118376 S   5,0  8,8  10:00.11 Web Content (B[m[39;49m[K
+(B[m 1617 andre     20   0 1495412 120852  64852 S   4,3  1,5   1:13.65 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415320  86832  70776 S   2,6  1,1   1:42.06 Xorg        (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201244  86044 S   1,7  2,5   2:33.58 rstudio     (B[m[39;49m[K
+(B[m 1395 andre     20   0  691996  45744  34928 S   1,0  0,6   0:00.94 hud-service (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.06 rcu_sched   (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,3  0,0   0:01.85 khugepaged  (B[m[39;49m[K
+(B[m 1277 andre     20   0   43964   4328   2780 S   0,3  0,1   0:01.56 dbus-daemon (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.81 ibus-daemon (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,3  0,4   0:05.28 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1385 andre     20   0  516428  29140  21572 S   0,3  0,4   0:02.68 bamfdaemon  (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.06 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K[H(B[mtop - 17:15:30 up  2:36,  1 user,  load average: 0,33, 0,18, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  3,9 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 95,1 (B[m[39;49mid,(B[m[39;49m[1m  0,2 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3083776 (B[m[39;49mfree,(B[m[39;49m[1m  3363668 (B[m[39;49mused,(B[m[39;49m[1m  1608488 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4111648 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576188 706372 118376 S   6,7  8,8  10:00.31 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352628 122752 S   4,0  4,4   6:13.14 firefox     (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494524 120524  64524 S   2,3  1,5   1:13.72 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415640  86872  70816 S   1,7  1,1   1:42.11 Xorg        (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   1,3  0,8   0:02.89 emacs       (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,7  0,1   0:15.83 ibus-daemon (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,7 21,8   0:35.94 rsession    (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,3  0,4   0:05.29 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1376 andre     20   0  188520   6132   5568 S   0,3  0,1   0:03.90 ibus-engin+ (B[m[39;49m[K
+(B[m 1385 andre     20   0  516428  29140  21572 S   0,3  0,4   0:02.69 bamfdaemon  (B[m[39;49m[K
+(B[m 1408 andre     20   0  633656  37228  25524 S   0,3  0,5   0:02.94 unity-pane+ (B[m[39;49m[K
+(B[m 1427 andre     20   0  206868   4956   4480 S   0,3  0,1   0:01.23 at-spi2-re+ (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,3  0,5   0:06.66 gnome-term+ (B[m[39;49m[K
+
+
+
+[H(B[mtop - 17:15:33 up  2:36,  1 user,  load average: 0,33, 0,18, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 221 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 220 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  1,9 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 97,3 (B[m[39;49mid,(B[m[39;49m[1m  0,4 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3082344 (B[m[39;49mfree,(B[m[39;49m[1m  3365400 (B[m[39;49mused,(B[m[39;49m[1m  1608188 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4110216 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576188 708044 118376 S   5,6  8,8  10:00.48 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352632 122752 S   2,7  4,4   6:13.22 firefox     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201244  86044 S   1,0  2,5   2:33.61 rstudio     (B[m[39;49m[K
+(B[m  930 root      20   0  415640  86872  70816 S   0,3  1,1   1:42.12 Xorg        (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.47 ibus-x11    (B[m[39;49m[K
+(B[m 3839 root      20   0       0      0      0 S   0,3  0,0   0:00.25 kworker/1:0 (B[m[39;49m[K
+(B[m 4185 root      20   0       0      0      0 S   0,3  0,0   0:00.04 kworker/u8+ (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.07 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.06 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1  (B[m[39;49m[K[H(B[mtop - 17:15:36 up  2:36,  1 user,  load average: 0,30, 0,18, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,2 (B[m[39;49mus,(B[m[39;49m[1m  0,2 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 97,3 (B[m[39;49mid,(B[m[39;49m[1m  0,1 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3079884 (B[m[39;49mfree,(B[m[39;49m[1m  3367856 (B[m[39;49mused,(B[m[39;49m[1m  1608192 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4107768 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576188 710628 118376 S   6,3  8,8  10:00.67 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352584 122752 S   2,7  4,4   6:13.30 firefox     (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,3  0,0   0:01.86 khugepaged  (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494492 120492  64492 S   0,3  1,5   1:13.73 compiz      (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201244  86044 S   0,3  2,5   2:33.62 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.95 rsession    (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.06 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/1  (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1 (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0,0  0,0   0:00.13 ksoftirqd/1 (B[m[39;49m[K[H(B[mtop - 17:15:39 up  2:36,  1 user,  load average: 0,30, 0,18, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  1,7 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 97,7 (B[m[39;49mid,(B[m[39;49m[1m  0,4 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3080512 (B[m[39;49mfree,(B[m[39;49m[1m  3367228 (B[m[39;49mused,(B[m[39;49m[1m  1608192 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4108400 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576252 710160 118376 S   5,0  8,8  10:00.82 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352588 122752 S   2,3  4,4   6:13.37 firefox     (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.84 ibus-daemon (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494492 120492  64492 S   0,3  1,5   1:13.74 compiz      (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201244  86044 S   0,3  2,5   2:33.63 rstudio     (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.08 top         (B[m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+[H(B[mtop - 17:15:42 up  2:36,  1 user,  load average: 0,27, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,2 (B[m[39;49mus,(B[m[39;49m[1m  0,2 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 97,3 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3081788 (B[m[39;49mfree,(B[m[39;49m[1m  3367948 (B[m[39;49mused,(B[m[39;49m[1m  1606196 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4109684 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576252 710956 118376 S   6,7  8,8  10:01.02 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352572 122752 S   2,3  4,4   6:13.44 firefox     (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.07 rcu_sched   (B[m[39;49m[K
+(B[m  930 root      20   0  415628  86944  70888 S   0,3  1,1   1:42.13 Xorg        (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201244  86044 S   0,3  2,5   2:33.64 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.96 rsession    (B[m[39;49m[K
+(B[m 4059 root      20   0       0      0      0 S   0,3  0,0   0:00.10 kworker/2:0 (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+
+
+
+
+
+[H(B[mtop - 17:15:45 up  2:36,  1 user,  load average: 0,25, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,8 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 96,6 (B[m[39;49mid,(B[m[39;49m[1m  0,2 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,1 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3080652 (B[m[39;49mfree,(B[m[39;49m[1m  3369180 (B[m[39;49mused,(B[m[39;49m[1m  1606100 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4108548 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576316 712848 118376 S   5,0  8,8  10:01.17 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352548 122752 S   3,0  4,4   6:13.53 firefox     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617712 201264  86044 S   2,0  2,5   2:33.70 rstudio     (B[m[39;49m[K
+(B[m  930 root      20   0  415692  86944  70888 S   1,3  1,1   1:42.17 Xorg        (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,7  0,1   0:15.86 ibus-daemon (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494428 120428  64428 S   0,7  1,5   1:13.76 compiz      (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   0,7  0,8   0:02.91 emacs       (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.48 ibus-x11    (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.09 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.07 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K[H(B[mtop - 17:15:48 up  2:36,  1 user,  load average: 0,25, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  1,9 (B[m[39;49mus,(B[m[39;49m[1m  0,4 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 97,6 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3075776 (B[m[39;49mfree,(B[m[39;49m[1m  3373992 (B[m[39;49mused,(B[m[39;49m[1m  1606164 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4103680 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576316 717668 118376 S   5,0  8,9  10:01.32 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352788 122752 S   2,7  4,4   6:13.61 firefox     (B[m[39;49m[K
+(B[m  930 root      20   0  415692  86944  70888 S   0,7  1,1   1:42.19 Xorg        (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.08 rcu_sched   (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.87 ibus-daemon (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.49 ibus-x11    (B[m[39;49m[K
+(B[m 1376 andre     20   0  188520   6132   5568 S   0,3  0,1   0:03.91 ibus-engin+ (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494428 120428  64428 S   0,3  1,5   1:13.77 compiz      (B[m[39;49m[K
+(B[m 1634 andre     20   0  482548  32836  25624 S   0,3  0,4   0:00.84 notify-osd  (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,3  2,5   2:33.71 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.97 rsession    (B[m[39;49m[K
+(B[m 3271 root      20   0       0      0      0 S   0,3  0,0   0:01.79 kworker/u8+ (B[m[39;49m[K
+(B[m 4185 root      20   0       0      0      0 S   0,3  0,0   0:00.05 kworker/u8+ (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.10 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K[H(B[mtop - 17:15:51 up  2:36,  1 user,  load average: 0,23, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  3,1 (B[m[39;49mus,(B[m[39;49m[1m  0,4 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 95,4 (B[m[39;49mid,(B[m[39;49m[1m  0,9 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3073720 (B[m[39;49mfree,(B[m[39;49m[1m  3376036 (B[m[39;49mused,(B[m[39;49m[1m  1606176 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4101636 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576444 719712 118376 S   6,0  8,9  10:01.50 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352604 122752 S   3,3  4,4   6:13.71 firefox     (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   3,3  0,8   0:03.01 emacs       (B[m[39;49m[K
+(B[m  930 root      20   0  415692  86944  70888 S   0,7  1,1   1:42.21 Xorg        (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,7  2,5   2:33.73 rstudio     (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.88 ibus-daemon (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,3  0,4   0:05.30 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.50 ibus-x11    (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494428 120428  64428 S   0,3  1,5   1:13.78 compiz      (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,3  0,5   0:06.67 gnome-term+ (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.08 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K[H(B[mtop - 17:15:54 up  2:36,  1 user,  load average: 0,23, 0,17, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,7 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 96,0 (B[m[39;49mid,(B[m[39;49m[1m  0,7 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3072696 (B[m[39;49mfree,(B[m[39;49m[1m  3377044 (B[m[39;49mused,(B[m[39;49m[1m  1606192 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4100620 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576508 720492 118376 S   4,7  8,9  10:01.64 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352584 122752 S   2,3  4,4   6:13.78 firefox     (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   2,0  0,8   0:03.07 emacs       (B[m[39;49m[K
+(B[m  930 root      20   0  415756  86944  70888 S   1,0  1,1   1:42.24 Xorg        (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   1,0  0,1   0:15.91 ibus-daemon (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494428 120428  64428 S   0,7  1,5   1:13.80 compiz      (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.51 ibus-x11    (B[m[39;49m[K
+(B[m 1376 andre     20   0  188520   6132   5568 S   0,3  0,1   0:03.92 ibus-engin+ (B[m[39;49m[K
+(B[m 1448 andre     20   0   22372   1168   1008 S   0,3  0,0   0:00.46 syndaemon   (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,3  2,5   2:33.74 rstudio     (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.11 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.08 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K[H(B[mtop - 17:15:57 up  2:36,  1 user,  load average: 0,21, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,8 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 96,6 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3069396 (B[m[39;49mfree,(B[m[39;49m[1m  3380276 (B[m[39;49mused,(B[m[39;49m[1m  1606260 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4097324 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576508 723608 118376 S   6,3  9,0  10:01.83 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352560 122752 S   2,0  4,4   6:13.84 firefox     (B[m[39;49m[K
+(B[m  930 root      20   0  415756  86944  70888 S   1,3  1,1   1:42.28 Xorg        (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   1,3  0,8   0:03.11 emacs       (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   1,0  0,1   0:15.94 ibus-daemon (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,7  0,2   0:02.53 ibus-x11    (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494428 120428  64428 S   0,7  1,5   1:13.82 compiz      (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,3  0,0   0:01.87 khugepaged  (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,3  2,5   2:33.75 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.98 rsession    (B[m[39;49m[K
+(B[m 3271 root      20   0       0      0      0 S   0,3  0,0   0:01.80 kworker/u8+ (B[m[39;49m[K
+
+
+
+
+
+[H(B[mtop - 17:16:00 up  2:36,  1 user,  load average: 0,20, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  1,9 (B[m[39;49mus,(B[m[39;49m[1m  0,3 (B[m[39;49msy,(B[m[39;49m[1m  0,1 (B[m[39;49mni,(B[m[39;49m[1m 96,8 (B[m[39;49mid,(B[m[39;49m[1m  0,8 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3068108 (B[m[39;49mfree,(B[m[39;49m[1m  3381552 (B[m[39;49mused,(B[m[39;49m[1m  1606272 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4096048 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1576508 724472 118376 S   4,3  9,0  10:01.96 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352544 122752 S   2,7  4,4   6:13.92 firefox     (B[m[39;49m[K
+(B[m  930 root      20   0  415756  86944  70888 S   0,7  1,1   1:42.30 Xorg        (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494492 120428  64428 S   0,7  1,5   1:13.84 compiz      (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   0,7  0,8   0:03.13 emacs       (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,3  0,0   0:05.09 rcu_sched   (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,3  0,1   0:15.95 ibus-daemon (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,3  0,4   0:05.31 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,3  0,2   0:02.54 ibus-x11    (B[m[39;49m[K
+(B[m 1376 andre     20   0  188520   6132   5568 S   0,3  0,1   0:03.93 ibus-engin+ (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,3  2,5   2:33.76 rstudio     (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,3 21,8   0:35.99 rsession    (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,3  0,0   0:00.12 top         (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K[?25l[H(B[mtop - 17:16:02 up  2:36,  1 user,  load average: 0,20, 0,16, 0,17(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 221 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 220 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  3,0 (B[m[39;49mus,(B[m[39;49m[1m  1,1 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 93,8 (B[m[39;49mid,(B[m[39;49m[1m  2,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3052608 (B[m[39;49mfree,(B[m[39;49m[1m  3381836 (B[m[39;49mused,(B[m[39;49m[1m  1621488 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4080572 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND     (B[m[39;49m[K
+(B[m 2228 andre     20   0 1578556 725240 118376 S   4,0  9,0  10:02.04 Web Content (B[m[39;49m[K
+(B[m 1617 andre     20   0 1495004 120428  64428 S   3,5  1,5   1:13.91 compiz      (B[m[39;49m[K
+(B[m  930 root      20   0  415540  86948  70892 S   2,0  1,1   1:42.34 Xorg        (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352540 122752 S   2,0  4,4   6:13.96 firefox     (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   1,0  0,1   0:15.97 ibus-daemon (B[m[39;49m[K
+(B[m 1277 andre     20   0   43964   4328   2780 S   0,5  0,1   0:01.57 dbus-daemon (B[m[39;49m[K
+(B[m 1360 andre     20   0  470420  31692  24332 S   0,5  0,4   0:05.32 ibus-ui-gt+ (B[m[39;49m[K
+(B[m 1363 andre     20   0  420588  19952  16780 S   0,5  0,2   0:02.55 ibus-x11    (B[m[39;49m[K
+(B[m 1376 andre     20   0  188520   6132   5568 S   0,5  0,1   0:03.94 ibus-engin+ (B[m[39;49m[K
+(B[m 1385 andre     20   0  516428  29140  21572 S   0,5  0,4   0:02.70 bamfdaemon  (B[m[39;49m[K
+(B[m 1395 andre     20   0  692028  45776  34960 S   0,5  0,6   0:00.95 hud-service (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   0,5  2,5   2:33.77 rstudio     (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,5  0,5   0:06.68 gnome-term+ (B[m[39;49m[K
+(B[m 4115 andre     20   0  583924  61668  34292 S   0,5  0,8   0:03.14 emacs       (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K[6;1H[7m Unknown command - try 'h' for help [?25l(B[m[39;49m[K[?25l[H(B[mtop - 17:16:04 up  2:36,  1 user,  load average: 0,34, 0,19, 0,18(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  3,0 (B[m[39;49mus,(B[m[39;49m[1m  0,5 (B[m[39;49msy,(B[m[39;49m[1m  0,0 (B[m[39;49mni,(B[m[39;49m[1m 96,5 (B[m[39;49mid,(B[m[39;49m[1m  0,0 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3059024 (B[m[39;49mfree,(B[m[39;49m[1m  3382692 (B[m[39;49mused,(B[m[39;49m[1m  1614216 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4086996 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1578556 726196 118376 S   6,2  9,0  10:02.17 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352520 122752 S   3,3  4,4   6:14.03 firefox     (B[m[39;49m[K
+(B[m 1863 andre     20   0 2617836 201328  86044 S   1,0  2,5   2:33.79 rstudio     (B[m[39;49m[K
+(B[m  930 root      20   0  415540  86948  70892 S   0,5  1,1   1:42.35 Xorg        (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,5  0,1   0:15.98 ibus-daemon (B[m[39;49m[K
+(B[m 1508 andre     20   0  422172  19932  16732 S   0,5  0,2   0:00.20 polkit-gno+ (B[m[39;49m[K
+(B[m 2134 andre     20   0  516812  25404  21748 S   0,5  0,3   0:00.36 update-not+ (B[m[39;49m[K
+(B[m 2822 andre     20   0 2435544 1,678g  35992 S   0,5 21,8   0:36.00 rsession    (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,5  0,5   0:06.69 gnome-term+ (B[m[39;49m[K
+(B[m    1 root      20   0  119672   5808   3964 S   0,0  0,1   0:01.36 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0,0  0,0   0:00.10 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0,0  0,0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0,0  0,0   0:05.09 rcu_sched   (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 S   0,0  0,0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m    9 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0 (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 watchdog/0  (B[m[39;49m[K[6;1H[7m Unknown command - try 'h' for help [?25l(B[m[39;49m[K[?25l[H(B[mtop - 17:16:05 up  2:36,  1 user,  load average: 0,34, 0,19, 0,18(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  2,8 (B[m[39;49mus,(B[m[39;49m[1m  0,6 (B[m[39;49msy,(B[m[39;49m[1m  0,2 (B[m[39;49mni,(B[m[39;49m[1m 93,6 (B[m[39;49mid,(B[m[39;49m[1m  2,8 (B[m[39;49mwa,(B[m[39;49m[1m  0,0 (B[m[39;49mhi,(B[m[39;49m[1m  0,0 (B[m[39;49msi,(B[m[39;49m[1m  0,0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  8055932 (B[m[39;49mtotal,(B[m[39;49m[1m  3057056 (B[m[39;49mfree,(B[m[39;49m[1m  3384644 (B[m[39;49mused,(B[m[39;49m[1m  1614232 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  8268796 (B[m[39;49mtotal,(B[m[39;49m[1m  8268796 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m  4085032 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m 2228 andre     20   0 1579580 727432 118376 S   7,9  9,0  10:02.27 Web Content (B[m[39;49m[K
+(B[m 1747 andre     20   0 1362064 352524 122752 S   3,2  4,4   6:14.07 firefox     (B[m[39;49m[K
+(B[m   32 root      39  19       0      0      0 S   0,8  0,0   0:01.88 khugepaged  (B[m[39;49m[K
+(B[m  810 root      20   0  166440   8816   8092 S   0,8  0,1   0:00.50 thermald    (B[m[39;49m[K
+(B[m 1324 andre     20   0  420688   8592   5248 S   0,8  0,1   0:15.99 ibus-daemon (B[m[39;49m[K
+(B[m 1617 andre     20   0 1494468 120436  64436 S   0,8  1,5   1:13.92 compiz      (B[m[39;49m[K
+(B[m 3073 andre     20   0  653804  38644  28376 S   0,8  0,5   0:06.70 gnome-term+ (B[m[39;49m[K
+(B[m 3737 root      20   0       0      0      0 S   0,8  0,0   0:01.74 kworker/u8+ (B[m[39;49m[K
+(B[m[1m 4261 andre     20   0   41816   3756   3080 R   0,8  0,0   0:00.13 top         (B[m[39;49m[K
+
+
+
+
+
+
+
+[?1l>[25;1H
+[?12l[?25h[K]0;andre@andre-X555LD: ~/aulas/SO/Pratica2[01;32mandre@andre-X555LD[00m:[01;34m~/aulas/SO/Pratica2[00m$ q;[K[Kexit
+
+Script done on Qui 23 Fev 2017 17:16:07 WET

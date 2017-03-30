@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/***
+ P é um apontador cujo valor é um endereço de memoria
+ 
+***/
+
+int main (){
+  int i=5;
+  /*variavel p guarda o endereço de memoria da variavel i*/
+  int *p=&i;  
+  printf("Valor inicial da variavel p:%d\n",p);
+  
+}

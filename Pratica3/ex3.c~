@@ -1,0 +1,26 @@
+#include <unistd.h>
+#include <stdio.h>
+
+int main(){
+  int n;
+  scanf("%d",&n);
+  int count;
+  pid_t p;
+  
+  printf("PAI PID %d PPID %d UID %d\n",getpid(),getppid(),getuid());
+  p=fork();
+  
+  for(count=1;count<(n+1);count++){
+    if(p==0){ // filho
+      printf("FILHO PID %d PPID %d UID %d\n",getpid(),getppid(),getuid());
+      break;
+    }
+
+     else{  
+       p=fork();
+    }
+  }
+
+  return 0;
+
+}
