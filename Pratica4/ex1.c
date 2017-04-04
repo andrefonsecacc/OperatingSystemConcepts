@@ -26,7 +26,7 @@ int status;
 	//sleep(3);
         read(fd[READ], readbuffer, sizeof(readbuffer));
         printf("Msg Recebida-> %s \n", readbuffer);
-	 sleep(6);
+        sleep(6);
         read(fd[READ], readbuffer, sizeof(readbuffer));
         printf("Msg Recebida-> %s \n", readbuffer);
     }
