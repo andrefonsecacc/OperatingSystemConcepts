@@ -150,24 +150,7 @@
             dup2(infd, 0);		// valor 0 corresponde ao valor do STDIN
             close(infd);
 
-          }
-          //Tarefa 4
-          //encontra ficheiro de output e testa se e ultimo filho
-          if(outputfile!=NULL && commlist->next==NULL){
-        //file decriptor outputfile so 1 posicao visto so alterarmos a entrada padrao
-        int outfd=open(outputfile, O_WRONLY|O_CREAT|O_APPEND, 0777);		//0777 da modo leitura, escrita e executavel
-        dup2(outfd, 1);		// valor 1 corresponde ao valor do STDOUT
-          }
-        execvp(commlist->cmd, commlist->argv);
-        perror("Execution failed");
-        exit(1);
-
-      }
-      else{ //pai
-        //first_child=0;
-
-        if(background_exec==0){
-          waitpid(pid,&status,WUNTRACED | WCONTINUED); //processo pai espera que o filho termine para apresentar o texto "myprompt"
+pid,&status,WUNTRACED | WCONTINUED); //processo pai espera que o filho termine para apresentar o texto "myprompt"
         }
         if(commlist->next!=NULL){
           close(fd[PIPE_WRITE]);
