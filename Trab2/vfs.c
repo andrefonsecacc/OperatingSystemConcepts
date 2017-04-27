@@ -71,6 +71,8 @@ void init_fat(void);
 void init_dir_block(int, int);
 void init_dir_entry(dir_entry *, char, char *, int, int);
 void exec_com(COMMAND);
+int get_free_block();
+void vfs_pwd_aux(dir_entry * entry);
 
 // funções de manipulação de diretórios
 void vfs_ls(void);
@@ -357,27 +359,145 @@ void exec_com(COMMAND com) {
   return;
 }
 
+int get_free_block(){
+  if(sb->free_block==0){
+    return -1;
+  }
+  int bloco = sb->free_block;
+  sb->free_block=fat[bloco];
+  fat[bloco]=-1;
+  sb->n_free_blocks--;
+  return bloco;
+}
+
+
+
+
+
+/* qsort C-string comparison function */ 
+int cmp(const void *a, const void *b) 
+{ 
+    const char **ia = (const char **)a;
+    const char **ib = (const char **)b;
+    return strcmp(*ia, *ib);
+  /* strcmp functions works exactly as expected from
+  comparison function */ 
+} 
 
 // ls - lista o conteúdo do diretório actual
 void vfs_ls(void) {
+  char *months[12] = {"Jan","Feb","Mar","Apr","May","Jun", "Jul","Aug","Sep","Oct","Nov","Dec"};
+  dir_entry *dir = (dir_entry *) BLOCK (current_dir);
+  int n_entradas = dir[0].size;
+  char *names[n_entradas];
+  int i=0;
+  for(i=0;i<n_entradas;i++){
+    names[i]=dir[i].name;
+  }
+  qsort(names, n_entradas, sizeof(char *), cmp);
+  int j=0;
+  for(j=0;j<n_entradas;j++){
+    for(i = 0;i<n_entradas;i++){
+      if(strcmp(names[j],dir[i].name)==0){
+        if(dir[i].type==TYPE_DIR){
+          printf("%s\t%d-%s-%d\tDIR\n",dir[i].name,dir[i].day, months[dir[i].month-1], dir[i].year+1900); // imprimir directorios
+          }
+        else{
+          printf("%s\t%d-%s-%d\t%d\n", dir[i].name,dir[i].day,months[dir[i].month-1],dir[i].year+1900,dir[i].size); // imprimir ficheiros. 
+          }
+        }
+    }
+    }
   return;
+
 }
 
 
 // mkdir dir - cria um subdiretório com nome dir no diretório actual
 void vfs_mkdir(char *nome_dir) {
-  return;
+   dir_entry *dir = (dir_entry *) BLOCK (current_dir);
+   int n_entradas = dir[0].size;
+   //int bloco = get_free_block();
+   int i=0;
+   for(i=0;i<n_entradas;i++){
+     if(strcmp(dir[i].name, nome_dir)==0){
+       perror("same name\n");
+       return ;
+     }
+   }
+
+   int bloco=get_free_block();
+   
+    // o número de entradas no diretório (inicialmente 2) fica guardado no campo size da entrada "."
+   init_dir_entry(&dir[n_entradas], TYPE_DIR, nome_dir, 0, bloco);
+   //init_dir_entry(&dir[1], TYPE_DIR, "..", 0, parent_block);
+   dir[0].size++;
+   init_dir_block(bloco,current_dir);
+   
+    return;
 }
 
 
 // cd dir - move o diretório actual para dir
 void vfs_cd(char *nome_dir) {
+  dir_entry * aux = (dir_entry*) BLOCK  (current_dir);
+  int n_entradas = aux[0].size;
+  int i;
+  for(i=0; i<n_entradas;i++){
+    if(strcmp(aux[i].name,nome_dir)==0){
+      current_dir = aux[i].first_block;
+      return;
+    }
+  }
+// Caso falhe a pesquisa do directory
+printf("ERROR(cd: cannot move to directory `%s\' - entry does not exist)\n\t", nome_dir);
   return;
+
 }
+
+void vfs_pwd_aux(dir_entry * entry){
+  int b;           //ciclo para blocos da fat
+  int i;           //ciclo para as n_entradas
+  dir_entry *aux;  //usar para ".." de entry e encontrar o nome de entry posteriormente
+  
+  /* se o directorio é a raiz --> regressa (termina recursão)*/
+  if( entry->first_block == sb->root_block ){
+     return;
+  }
+  aux = (dir_entry *)BLOCK( entry->first_block );
+  vfs_pwd_aux(&aux[1]); // entrada ".." de `entry', anda para tras
+
+  //tentar retirar o nome do proximo dir
+  for( b = aux[1].first_block; b != -1; b = fat[b] ) {
+     aux = (dir_entry *)BLOCK( b );
+     int n_entradas=aux[0].size;
+     for( i = 0; i < n_entradas; i++){
+        if( aux[i].first_block == entry->first_block ){
+           printf("/%s", aux[i].name);
+           return;
+        }
+     }
+  }
+
+}
+
 
 
 // pwd - escreve o caminho absoluto do diretório actual
 void vfs_pwd(void) {
+  dir_entry * entry = (dir_entry*)BLOCK(current_dir);
+
+  if(entry->first_block == sb->root_block){ //estou no directorio raiz
+    printf("/");
+  }
+
+  else{
+    vfs_pwd_aux(entry); // sigo recursivamente ate a raiz
+  }
+
+  printf("\n");
+
+
   return;
 }
 
