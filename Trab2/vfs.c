@@ -73,6 +73,7 @@ void init_dir_entry(dir_entry *, char, char *, int, int);
 void exec_com(COMMAND);
 int get_free_block();
 void vfs_pwd_aux(dir_entry * entry);
+void put_free_block(int nome);
 
 // funções de manipulação de diretórios
 void vfs_ls(void);
@@ -501,11 +502,51 @@ void vfs_pwd(void) {
   return;
 }
 
+void put_free_block(int nome){
+  fat[nome]=sb->free_block;
+  sb->free_block=nome;
+  sb->n_free_blocks++;
+  return;
+}
+
 
 // rmdir dir - remove o subdiretório dir (se vazio) do diretório actual
 void vfs_rmdir(char *nome_dir) {
-  return;
-}
+  dir_entry * entry = (dir_entry *) BLOCK(current_dir);
+  int n_entradas=entry[0].size;
+  //char names[n_entradas];
+  int i=0;
+
+  if( (strcmp(nome_dir, ".") == 0) || (strcmp(nome_dir, "..") == 0) ) {
+    printf("ERROR(rmdir: cannot remove directory `%s\' - invalid directory)\n", nome_dir);
+    return;
+  }
+  /*
+    for(i=0;i<n_entradas;i++){
+    names[i]=entry[i].name;
+    }
+  */
+  for(i=0;i<n_entradas;i++){
+
+    if(strcmp(nome_dir,entry[i].name)==0 && entry[i].type==TYPE_DIR){
+	dir_entry *aux = (dir_entry *)BLOCK(entry[i].first_block);
+	if (aux[0].size != 2){       //tem conteudo para alem dos directorios iniciais "." e ".."
+	  printf("File not empty");
+	  return;
+	}
+	else{                                             //podemos remover
+	  put_free_block(entry[i].first_block);             //pomos bloco disponivel
+	  entry[0].size--;                                  //diminuimos o tamanho do dir actual
+	  memcpy(&entry[i],&entry[n_entradas-1],sizeof(dir_entry));
+	}
+      }
+    /* else{
+	printf("Directorio não existe ou e um ficheiro....\n");
+	}*/
+  }
+  
+    return;
+  }
 
 
 // get fich1 fich2 - copia um ficheiro normal UNIX fich1 para um ficheiro no nosso sistema fich2
