@@ -531,7 +531,7 @@ void vfs_rmdir(char *nome_dir) {
     if(strcmp(nome_dir,entry[i].name)==0 && entry[i].type==TYPE_DIR){
 	dir_entry *aux = (dir_entry *)BLOCK(entry[i].first_block);
 	if (aux[0].size != 2){       //tem conteudo para alem dos directorios iniciais "." e ".."
-	  printf("File not empty");
+	  printf("File not empty\n");
 	  return;
 	}
 	else{                                             //podemos remover
@@ -551,6 +551,48 @@ void vfs_rmdir(char *nome_dir) {
 
 // get fich1 fich2 - copia um ficheiro normal UNIX fich1 para um ficheiro no nosso sistema fich2
 void vfs_get(char *nome_orig, char *nome_dest) {
+  //dir_entry * entry = (dir_entry *) BLOCK(current_dir);
+  if(strlen(nome_dest) >= MAX_NAME_LENGHT)
+    {
+      printf("get: cannot create file '%s': File name too long\n", nome_dest);
+      return;
+    }
+
+  dir_entry* dir = (dir_entry*)BLOCK(current_dir);
+
+  int i;
+
+  for(i = 2; i < dir[0].size; i++)
+    {
+      if(strcmp(nome_dest, dir[i].name) == 0)
+	{
+	  printf("get: cannot create file '%s': File exists\n", nome_dest);
+	  return;
+	}
+    }
+
+  int fd;
+  if((fd=open(nome_orig,O_RDONLY))==-1){
+    printf("file does not exist on UNIX \n");
+    return;
+  }
+
+  int bloco = get_free_block();
+  int bytes_read=0; 
+  struct stat file_status;
+  stat(nome_orig,&file_status);
+  bytes_read += read(fd,BLOCK(bloco),sb->block_size);
+
+  while(bytes_read < file_status.st_size){
+    int tmp_free_block = get_free_block();
+
+    bytes_read += read(fd, BLOCK(tmp_free_block), sb->block_size);
+  }
+  
+  init_dir_entry(&dir[dir[0].size], TYPE_FILE, nome_dest, bytes_read, bloco);
+
+  dir[0].size++;
+  //init_dir_block(bloco,current_dir);
   return;
 }
 
