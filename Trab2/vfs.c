@@ -592,7 +592,7 @@ void vfs_get(char *nome_orig, char *nome_dest) {
   init_dir_entry(&dir[dir[0].size], TYPE_FILE, nome_dest, bytes_read, bloco);
 
   dir[0].size++;
-  //init_dir_block(bloco,current_dir);
+  init_dir_block(bloco,current_dir);
   return;
 }
 
@@ -625,5 +625,31 @@ void vfs_mv(char *nome_orig, char *nome_dest) {
 
 // rm fich - remove o ficheiro fich
 void vfs_rm(char *nome_fich) {
-  return;
+  dir_entry* dir = (dir_entry*)BLOCK(current_dir);
+	
+	int file_found = 0;
+	int i;
+
+	for(i = 2; i < dir[0].size; i++)
+	{
+		if (dir[i].type == TYPE_FILE && !strcmp(dir[i].name, nome_fich))
+		{
+			file_found = 1;
+			
+			dir[i].first_block = sb->free_block;
+			fat[sb -> free_block] = fat[dir[i].first_block];
+		}
+
+		if(nome_fich && i < dir[0].size - 1)
+		{		
+			dir[i] = dir[i + 1];
+		}
+	}    
+
+	if(file_found)
+	{
+		dir[0].size--;
+	}
+	
+return;
 }
