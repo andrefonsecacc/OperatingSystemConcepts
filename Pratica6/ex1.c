@@ -1,6 +1,6 @@
-#include<pthread.h>
-#include<stdio.h>
-#include<semaphore.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <semaphore.h>
 
 void *doSomething(void *arg);
 
