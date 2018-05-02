@@ -75,7 +75,9 @@ void * doSomething(void *arg){
   int i;
   pthread_t id= pthread_self();
   for (int i = 0; i < count; i++){
-    if(pthread_equal(id,tid[i]))
+    if(pthread_equal(id,tid[i])){
+      
+    }
   }
 
   
